@@ -1,0 +1,21 @@
+extends layout
+block content
+    for participant in users
+        div.row.row-bottom-padding
+            div.col-xs-12.hack-background
+                div.col-xs-10
+                    p.hack-title= participant.profile.name
+                div.col-xs-10
+                    div= participant.email
+                div.col-xs-2
+                    if user.judge
+                        form(role='form' method='post')
+                            .form-group
+                                input(type='hidden', name='_csrf', value=_csrf)
+                            .form-group
+                                input(type='hidden', name='id', value=participant._id)
+                            .form-group
+                                i.fa.fa-gavel
+                                input(type="checkbox", name="judge", checked=(participant.judge === true ? "checked" : undefined), title='Make Judge')
+                                button.btn.btn-default.make-judge-button.float-right(type='submit') Update
+

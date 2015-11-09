@@ -1,0 +1,16 @@
+
+div.row
+    div.hacks-count= events.length + " Hacks"
+
+for event in events
+    div.row.row-bottom-padding
+        div.col-xs-12.hack-background
+            div.row
+                div.col-xs-3
+                    img.img-responsive(src=event.pictureURL ? event.pictureURL : '/image/default-hack-image.png')
+                div.col-xs-9
+                    div.col-xs-10
+                        a.hack-title(href="/events/" + event._id)= event.title
+                    div.col-xs-2
+                        div.label.label-default.hack-category= categoryLookup[event.category]
+                    div.col-xs-12.pre= event.description

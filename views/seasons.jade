@@ -1,0 +1,17 @@
+extends layout
+block content
+    if seasons.length === 0
+        h3 There is no season yet !
+    else
+        div.row
+            div.hacks-count= seasons.length + " Seasons"
+    if user.judge
+        div.float-right.row-bottom-padding
+            a.create-hack(href='create-season') Add
+    for season in seasons
+        div.row.row-bottom-padding
+            div.col-xs-12.hack-background
+                div.col-xs-10
+                    a.hack-title(href="/create-season/" + season._id)= season.name
+                div.col-xs-2
+                    input(type='checkbox', checked=season.current disabled)

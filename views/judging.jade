@@ -1,0 +1,20 @@
+extends layout
+block content
+    if nominated.length === 0
+        h3 There is no nomination yet !
+    else
+        div.row
+            div.hacks-count= nominated.length + " Nominations"
+    for nomination in nominated
+        div.row.row-bottom-padding
+            div.col-xs-12.hack-background
+                div.row
+                    div.col-xs-3
+                        img.img-responsive(src=nomination.pictureURL ? nomination.pictureURL : '/image/default-hack-image.png')
+                    div.col-xs-9
+                        div.col-xs-10
+                            a.hack-title(href="/events/" + nomination._id)= nomination.title
+                        div.col-xs-2
+                            div.label.label-default.hack-category= categoryLookup[nomination.category]
+                        div.col-xs-12.pre= nomination.description
+

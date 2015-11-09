@@ -1,0 +1,14 @@
+extends ../layout
+block content
+    h3 Edit Rules
+    div.row
+        div.col
+            form(role='form' method='post')
+                .form-group
+                    input(type='hidden', name='_csrf', value=_csrf)
+                .form-group
+                    input(type='hidden', name='id', value=rules._id)
+                .form-group
+                    label(for='description') Description:
+                    textarea#description.form-control(type='text' name='description' rows=26)= rules.description
+                button.btn.btn-default(type='submit') Submit

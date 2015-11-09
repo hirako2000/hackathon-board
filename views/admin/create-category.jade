@@ -1,0 +1,18 @@
+extends ../layout
+block content
+    if id
+        h3 Edit Category
+    else
+        h3 Create Category
+    div.row
+        div.col
+            form(role='form' method='post')
+                .form-group
+                    input(type='hidden', name='_csrf', value=_csrf)
+                .form-group
+                    label(for='name') Name:
+                    input#name.form-control(type='text' name='name' value=category.name)
+                .form-group
+                    label(for='description') Description:
+                    textarea#description.form-control(type='text' name='description' rows=6)=category.description
+                button.btn.btn-default(type='submit') Submit

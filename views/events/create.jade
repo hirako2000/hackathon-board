@@ -1,0 +1,51 @@
+extends ../layout
+block content
+    if id
+        h3 Edit Hack
+    else
+        h3 Create Hack
+
+    div.row
+        div.col
+            form(role='form' method='post')
+                .form-group
+                    input(type='hidden', name='_csrf', value=_csrf)
+                .form-group
+                    label(for='title') Title:
+                    input#title.form-control(type='text' name='title' value=event.title)
+                .form-group
+                    label(for='pictureURL') Picture URL:
+                    input#pictureURL.form-control(type='text' name='pictureURL' value=event.pictureURL)
+                .form-group
+                    label(for='description') Description:
+                    textarea#description.form-control(type='text' name='description' rows=6)=event.description
+                .form-group
+                    label(for='category') Category:
+                    select#category.form-control(type'text' name='category' value=event.category)
+                        for category in categories
+                            option(value=category._id, selected=event.category === category._id.toString())= category.name
+                .form-group
+                    label(for='season') Season:
+                    select#season.form-control(type'text' name='season' value=event.season)
+                        for season in seasons
+                            option(value=season._id selected=event.season ? event.season === season._id : season.current)= season.name
+                .form-group
+                    label(for='location') Location:
+                    select#location.form-control(type'text' name='location')
+                        option(value="Atlanta" selected=event.location === "Atlanta") Atlanta
+                        option(value="Edinburgh" selected=event.location === "Edinburgh") Edinburgh
+                        option(value="Hyderabad" selected=event.location === "Hyderabad") Hyderabad
+                        option(value="Providence" selected=event.location === "Providence") Providence
+                        option(value="Remote" selected=event.location === "Remote") Remote
+                .form-group
+                    label(for='open') Open to other participant(s):
+                    select#open.form-control(type='radio' name='open' value=event.open)
+                        option(value="true" selected=event.open === true) Yes
+                        option(value="false" selected=event.open === false) No
+                .form-group
+                    label(for='science') Science Project:
+                    select#open.form-control(type='radio' name='science' value=event.science)
+                        option(value="true" selected=event.science && event.science === true) Yes
+                        option(value="false" selected=event.science === false || event.science === undefined) No
+
+                button.btn.btn-default(type='submit') Submit

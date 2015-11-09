@@ -1,0 +1,26 @@
+extends ../layout
+block content
+    if id
+        h3 Edit Prize
+    else
+        h3 Create Prize
+    div.row
+        div.col
+            form(role='form' method='post')
+                .form-group
+                    input(type='hidden', name='_csrf', value=_csrf)
+                .form-group
+                    label(for='name') Name:
+                    input#name.form-control(type='text' name='name' value=prize.name)
+                .form-group
+                    label(for='pictureURL') Picture URL:
+                    input#pictureURL.form-control(type='text' name='pictureURL' value=prize.pictureURL)
+                .form-group
+                    label(for='description') Description:
+                    textarea#description.form-control(type='text' name='description' rows=6)=prize.description
+                .form-group
+                    label(for='category') Category:
+                    select#category.form-control(type'text' name='category')
+                        for category in categories
+                            option(value=category._id selected=prize.category === category._id.toString())= category.name
+                button.btn.btn-default(type='submit') Submit

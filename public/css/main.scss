@@ -1,0 +1,246 @@
+@import "themes/default/variables";
+
+@import "vendors/bootstrap/bootstrap";
+@import "vendors/bootstrap-social";
+@import "vendors/font-awesome/font-awesome";
+
+@import "themes/default/styles";
+
+// Scaffolding
+// -------------------------
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  padding-top: 60px;
+  margin-bottom: 75px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+
+  p, ul {
+    margin-bottom: 0;
+  }
+}
+
+.container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+// Navbar
+// -------------------------
+
+.navbar-nav img {
+  width: 30px;
+  height: 30px;
+  margin: -15px 15px -15px;
+}
+
+.create-hack {
+  font-size: 0.9em;
+  background-color: #005983;
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 2px 25px 2px 25px;
+  text-decoration: none;
+}
+
+.create-hack:hover {
+  background-color: ghostwhite;
+  color: #005983;
+  text-decoration: none;
+}
+
+// Alerts
+// -------------------------
+
+.alert {
+  margin-top: 20px;
+}
+
+// Thumbnails
+// -------------------------
+
+.thumbnail {
+  padding: 0;
+  border-radius: 0;
+  box-shadow: 0 0 5px #ccc, inset 0 0 0 #000;
+}
+
+// Font Icons
+// -------------------------
+
+.fa {
+  margin-right: 6px;
+}
+
+// styling search bar
+
+.search {
+  padding: 0px 10px 0px 10px ;
+}
+
+
+// Styling events sections
+.pre {
+  white-space: pre-wrap;
+  display: block;
+
+}
+
+.hacks-count {
+  font-weight: bold;
+  padding: 15px 15px 15px 5px
+}
+
+.row-bottom-padding {
+  padding-bottom: 20px;
+}
+
+.hack-category {
+  float: right;
+  min-width: 100px;
+  font-weight: bold;
+  font-size: 1.0em;
+}
+
+.hack-background {
+  border-radius: 5px;
+  background-color: whitesmoke;
+  padding: 10px;
+  margin-top: 15px;
+
+}
+
+.hack-title {
+  color: #003366;
+  font-weight: bold;
+  font-size: 1.4em;
+  text-decoration: none;
+}
+
+.hack-link:hover {
+  color: #005983;
+  text-decoration: none;
+}
+
+.hack-description {
+  padding-bottom: 20px;
+}
+
+.hack-labels {
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.comment-content {
+  background-color: ghostwhite;
+  padding: 10px;
+  marging-left: 50px;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+
+.join-hack {
+  font-size: 1.1em;
+  background-color: #005983;
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 2px 25px 2px 25px;
+  width: 100%;
+  border: 0;
+}
+
+.join-hack:hover {
+  background-color: ghostwhite;
+  color: #005983;
+}
+
+.leave-hack {
+  font-size: 1.1em;
+  background-color: #a02d1a;
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 2px 25px 2px 25px;
+  width: 100%;
+  border: 0;
+}
+
+.leave-hack:hover {
+  background-color: ghostwhite;
+  color: #a02d1a;
+}
+
+.float-right {
+  float: right;
+}
+
+
+.full-width {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.padding-top {
+  padding-top: 20px;
+}
+
+/** Event details **/
+.participant-heading {
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+.participant-avatar {
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  margin: 5px 15px 15px 15px;
+}
+
+.participant-name {
+  padding-left: 15px;
+}
+
+/* Admin page styling */
+.very-large-button {
+  padding: 30px 30px;
+  margin: 5px;
+  width: 100%;
+  float: left;
+  background-color: #005983;
+}
+
+.very-large-button:hover {
+  background-color: ghostwhite;
+  color: #005983;
+
+}
+
+.make-judge-button {
+  font-size: 0.6em;
+}
+
+.admin-links {
+  font-size: 1.1em;
+  padding-left: 40%;
+  padding-right: 40%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: whitesmoke;
+
+}
+
+.admin-links:hover {
+  text-decoration: none;
+}
+

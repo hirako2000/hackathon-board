@@ -1,0 +1,19 @@
+extends layout
+block content
+    if categories.length === 0
+        h3 There is no category yet !
+    else
+        div.row
+            div.hacks-count= categories.length + " Categories"
+    if user && user.judge
+        div.float-right.row-bottom-padding
+            a.create-hack(href='create-category') Add
+    for category in categories
+        div.row.row-bottom-padding
+            div.col-xs-12.hack-background
+                div.col-xs-12
+                    if user && user.judge
+                        a.hack-title(href="/create-category/" + category._id)= category.name
+                    else
+                        p.hack-title= category.name
+                div.col-xs-12= category.description

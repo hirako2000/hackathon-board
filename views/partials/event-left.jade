@@ -1,0 +1,37 @@
+block content
+    if event.open
+        div.row
+            div.col-xs-12
+                if user && user.judge === true
+                    form(role='form' method='post' action='/events/nominate')
+                        .form-group
+                            input(type='hidden' name='event', value= id)
+                        .form-group
+                            input(type='hidden', name='_csrf', value=_csrf)
+                        button.leave-hack.fa.fa-gavel.full-width(type='submit') Nominate
+
+                if joined === true
+                    form(role='form' method='post' action='/events/leave')
+                        .form-group
+                            input(type='hidden' name='event', value= id)
+                        .form-group
+                            input(type='hidden', name='_csrf', value=_csrf)
+                        button.leave-hack(type='submit') Leave Hack
+                else
+                    form(role='form' method='post' action='/events/join')
+                        .form-group
+                            input(type='hidden' name='event', value= id)
+                        .form-group
+                            input(type='hidden', name='_csrf', value=_csrf)
+                        button.join-hack(type='submit') Join Hack
+
+    div.row.padding-top
+        div.col-xs-12
+            div.hack-background
+                div.participant-heading
+                    span= participants.length
+                    span  joined
+                for participant in participants
+                    div
+                        img.participant-avatar(src='#{participant.profile.picture}')
+                        span.participant-name= participant.profile.name

@@ -1,0 +1,23 @@
+extends layout
+block content
+    if prizes.length === 0
+        h3 There is no prize yet !
+    else
+        div.row
+            div.hacks-count= prizes.length + " Prizes"
+    if user && user.judge
+        div.float-right.row-bottom-padding
+            a.create-hack(href='create-prize') Add
+    for prize in prizes
+        div.row.row-bottom-padding
+            div.col-xs-12.hack-background
+                div.col-xs-4
+                    img.img-responsive(src=prize.pictureURL)
+                div.col-xs-8
+                    h4='Reward for '+ categoryLookup[prize.category]
+                div.col-xs-8
+                    if user && user.judge
+                        a.hack-title(href="/create-prize/" + prize._id)= prize.name
+                    else
+                        p.hack-title= prize.name
+                div.col-xs-8= prize.description

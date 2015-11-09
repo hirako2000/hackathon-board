@@ -1,0 +1,20 @@
+extends ../layout
+block content
+    if id
+        h3 Edit Season
+    else
+        h3 Create Season
+    div.row
+        div.col
+            form(role='form' method='post')
+                .form-group
+                    input(type='hidden', name='_csrf', value=_csrf)
+                .form-group
+                    label(for='name') Name:
+                    input#name.form-control(type='text' name='name' value=season.name)
+                .form-group
+                    label(for='current') Current:
+                    select#current.form-control(type'text' name='current' value=season.current)
+                        option(value="true" selected=season.current === true) Yes
+                        option(value="false" selected=season.current === false) No
+                button.btn.btn-default(type='submit') Submit
