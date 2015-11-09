@@ -33,8 +33,8 @@ Features
   * Name
   * picture
   * description
-- ** Rules page**  
-- ** User profile**
+- **Rules page**  
+- **User profile**
  - Gravatar
  - Profile Details
  - Change Password
@@ -43,7 +43,7 @@ Features
  - Link multiple OAuth strategies to one account
  - Delete Account
 - CSRF protection
-- ** Admin **
+- **Admin**
  - Add/edit categories
  - Add/edit seasons
  - Add/Edit prize
