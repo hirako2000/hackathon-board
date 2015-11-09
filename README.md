@@ -72,6 +72,12 @@ $ npm install
 $ node app.js
 ```
 
+In order to use sass css, install node-sass
+
+```bash
+# npm install --save node-sass
+```
+
 Obtaining API Keys
 ------------------
 
