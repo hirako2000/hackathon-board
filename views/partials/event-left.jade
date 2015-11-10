@@ -33,5 +33,8 @@ block content
                     span  joined
                 for participant in participants
                     div
-                        img.participant-avatar(src='#{participant.profile.picture}')
+                        if participant.profile.picture
+                            img.participant-avatar(src='#{participant.profile.picture}')
+                        else
+                            img.participant-avatar(src='http://www.gravatar.com/avatar/3b3be63a4c2a439b013787725dfce802?d=identicon')
                         span.participant-name= participant.profile.name

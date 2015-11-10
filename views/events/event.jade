@@ -54,7 +54,10 @@ block content
 
             for comment in comments
                 div.row.row-bottom-padding.comment-content
-                    img.participant-avatar(src='#{comment.authorPicture}')
+                    if comment.authorPicture
+                        img.participant-avatar(src='#{comment.authorPicture}')
+                    else
+                        img.participant-avatar(src='http://www.gravatar.com/avatar/3b3be63a4c2a439b013787725dfce802?d=identicon')
                     span.participant-heading= comment.authorName
                     span= ' says:'
                     div= comment.comment
