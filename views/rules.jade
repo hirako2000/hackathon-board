@@ -2,4 +2,7 @@ extends layout
 block content
     h3 Rules
     div.row
-        div.col.pre= rules.description
+        if rules
+            div.col.pre= rules.description
+        else
+            h4 There is no rules yet
