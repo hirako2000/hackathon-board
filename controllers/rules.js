@@ -10,7 +10,16 @@ exports.getRules = function(req, res) {
 
 exports.editRules = function(req, res) {
     Rules.find(function(err, docs) {
-        res.render('admin/create-rules', { rules: docs[0] });
+        if (!docs || !docs[0]) {
+            var rules = new Rules();
+            rules.save(function(err, entity) {
+                if (err) return next(err);
+                res.render('admin/create-rules', { rules :entity });
+            });
+        } else {
+            res.render('admin/create-rules', { rules: docs[0] });
+        }
+
     });
 };
 
