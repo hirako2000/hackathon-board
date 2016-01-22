@@ -17,6 +17,9 @@ block content
                     label(for='pictureURL') Picture URL:
                     input#pictureURL.form-control(type='text' name='pictureURL' value=event.pictureURL)
                 .form-group
+                    label(for='short-description') Short description (heading):
+                    textarea#short-description.form-control(type='text' name='shortDescription' maxlength="120" rows=2)=event.shortDescription
+                .form-group
                     label(for='description') Description:
                     textarea#description.form-control(type='text' name='description' rows=6)=event.description
                 .form-group
@@ -44,7 +47,7 @@ block content
                         option(value="false" selected=event.open === false) No
                 .form-group
                     label(for='science') Science Project:
-                    select#open.form-control(type='radio' name='science' value=event.science)
+                    select#science.form-control(type='radio' name='science' value=event.science)
                         option(value="true" selected=event.science && event.science === true) Yes
                         option(value="false" selected=event.science === false || event.science === undefined) No
 

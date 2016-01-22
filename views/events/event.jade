@@ -13,7 +13,8 @@ block content
                         a.create-hack(href='edit/' + id)
                             i.fa.fa-pencil-square-o  Edit
 
-                div.col-xs-12.pre.hack-description= event.description
+                div.col-xs-12.pre.hack-description= event.shortDescription
+                div.col-xs-12.pre.hack-description!= md(event.description)
 
                 div.col.xs-9.col-sm-9.col-md-9.col-lg-9
                     img.img-responsive(src=event.pictureURL ? event.pictureURL : '/image/default-hack-image.png', width='100%', height='100%')

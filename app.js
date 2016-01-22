@@ -20,6 +20,7 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var expressValidator = require('express-validator');
 var sass = require('node-sass-middleware');
+var md = require("node-markdown").Markdown;
 
 
 /**

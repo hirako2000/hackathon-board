@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var md = require("node-markdown").Markdown;
 /**
  * GET /events
  * List all events.
@@ -16,7 +17,7 @@ exports.getEvents = function(req, res) {
         for (var i = 0; i < categories.length; i++) {
           categoryLookup[categories[i]._id] = categories[i].name;
         }
-        res.render('home', { events: events, seasons : seasons, categories: categories, categoryLookup: categoryLookup});
+        res.render('home', { md: md, events: events, seasons : seasons, categories: categories, categoryLookup: categoryLookup});
       });
     });
   });
@@ -33,7 +34,7 @@ exports.search = function(req, res) {
           for (var i = 0; i < categories.length; i++) {
             categoryLookup[categories[i]._id] = categories[i].name;
           }
-          res.render('home', {events: docs, seasons: seasons, categories: categories, categoryLookup: categoryLookup});
+          res.render('home', {md: md, events: docs, seasons: seasons, categories: categories, categoryLookup: categoryLookup});
 
       });
     });
@@ -81,7 +82,7 @@ exports.getEvent = function(req, res) {
               for (var i = 0; i < seasons.length; i++) {
                 seasonLookup[seasons[i]._id] = seasons[i].name;
               }
-              res.render('events/event', { event: event, participants: users, id: req.params.id, category: category.name,
+              res.render('events/event', { md: md, event: event, participants: users, id: req.params.id, category: category.name,
                 joined: hasJoined, comments: structuredComments, categoryLookup: categoryLookup, seasonLookup: seasonLookup});
             });
 
@@ -102,7 +103,7 @@ exports.getMy = function(req, res) {
       for (var i = 0; i < categories.length; i++) {
         categoryLookup[categories[i]._id] = categories[i].name;
       }
-      res.render('events/my', { events: docs, categoryLookup: categoryLookup});
+      res.render('events/my', { md: md, events: docs, categoryLookup: categoryLookup});
     });
   });
 };
@@ -158,7 +159,7 @@ exports.createEvent = function(req, res) {
       Season.find(function(err, seasons) {
         Category.find(function(err, categories) {
           if (err) return next(err);
-          res.render('events/create', { event: event, id: req.params.id, seasons: seasons, categories: categories});
+          res.render('events/create', { md: md, event: event, id: req.params.id, seasons: seasons, categories: categories});
         });
       });
     });
@@ -177,6 +178,7 @@ exports.postEvent = function(req, res, next) {
     Event.findOne({ _id: req.params.id }, function(err, entity) {
       if (err) return next(err);
       entity.title = req.body.title || '';
+      entity.shortDescription = req.body.shortDescription || '';
       entity.description = req.body.description || '';
       entity.pictureURL = req.body.pictureURL || '';
       entity.category = req.body.category || '';
@@ -193,6 +195,7 @@ exports.postEvent = function(req, res, next) {
   } else {
     var event = new Event();
     event.title = req.body.title || '';
+    event.shortDescription = req.body.shortDescription || '';
     event.description = req.body.description || '';
     event.pictureURL = req.body.pictureURL || '';
     event.category = req.body.category || '';
