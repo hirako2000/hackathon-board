@@ -17,10 +17,14 @@ block content
                     label(for='pictureURL') Picture URL:
                     input#pictureURL.form-control(type='text' name='pictureURL' value=event.pictureURL)
                 .form-group
-                    label(for='short-description') Short description (heading):
+                    label(for='short-description') Short description
+                    span  (heading):
                     textarea#short-description.form-control(type='text' name='shortDescription' maxlength="120" rows=2)=event.shortDescription
                 .form-group
-                    label(for='description') Description:
+                    label(for='description') Description
+                    span  (Supports markdown
+                    a(href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet", title="markdown syntax", target="_blank") syntax
+                    span )
                     textarea#description.form-control(type='text' name='description' rows=6)=event.description
                 .form-group
                     label(for='category') Category:
