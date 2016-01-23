@@ -37,6 +37,10 @@ block content
       .col-sm-7
         input.form-control(type='text', name='location', id='location', value='#{user.profile.location}')
     .form-group
+      label.col-sm-3.control-label(for='address') Address (for shipping)
+      .col-sm-7
+        textarea#address.form-control(type='text' name='address' rows=4)=user.profile.address
+    .form-group
       label.col-sm-3.control-label(for='website') Website
       .col-sm-7
         input.form-control(type='text', name='website', id='website', value='#{user.profile.website}')
