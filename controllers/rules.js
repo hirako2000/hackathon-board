@@ -1,10 +1,11 @@
 var mongoose = require('mongoose');
+var md = require("node-markdown").Markdown;
 
 var Rules = require('../models/Rules.js');
 
 exports.getRules = function(req, res) {
     Rules.find(function(err, docs) {
-        res.render('rules', { rules: docs[0] });
+        res.render('rules', { md: md, rules: docs[0] });
     });
 };
 

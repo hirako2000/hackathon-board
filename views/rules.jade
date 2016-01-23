@@ -3,6 +3,6 @@ block content
     h3 Rules
     div.row
         if rules
-            div.col.pre= rules.description
+            div.col.pre!= md(rules.description)
         else
             h4 There is no rules yet

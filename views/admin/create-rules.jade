@@ -10,5 +10,8 @@ block content
                     input(type='hidden', name='id', value=rules._id)
                 .form-group
                     label(for='description') Description:
+                    span  (Supports markdown&nbsp
+                        a(href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet", title="markdown syntax", target="_blank") syntax
+                        span )
                     textarea#description.form-control(type='text' name='description' rows=26)= rules.description
                 button.btn.btn-default(type='submit') Submit
