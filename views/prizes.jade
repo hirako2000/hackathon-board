@@ -20,4 +20,4 @@ block content
                         a.hack-title(href="/create-prize/" + prize._id)= prize.name
                     else
                         p.hack-title= prize.name
-                div.col-xs-8= prize.description
+                div.col-xs-8!= md(prize.description)

@@ -17,6 +17,9 @@ block content
                     input#pictureURL.form-control(type='text' name='pictureURL' value=prize.pictureURL)
                 .form-group
                     label(for='description') Description:
+                    span  (Supports markdown&nbsp
+                        a(href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet", title="markdown syntax", target="_blank") syntax
+                        span )
                     textarea#description.form-control(type='text' name='description' rows=6)=prize.description
                 .form-group
                     label(for='category') Category:

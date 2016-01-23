@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var md = require("node-markdown").Markdown;
 
 var User = require('../models/User');
 var Season = require('../models/Season');
@@ -18,7 +19,7 @@ exports.getPrizes = function (req, res) {
                 lookup[categories[i]._id] = categories[i].name;
             }
             if (err) return next(err);
-            res.render('prizes', {prizes: prizes, categoryLookup: lookup});
+            res.render('prizes', { md: md, prizes: prizes, categoryLookup: lookup });
         });
     });
 };
