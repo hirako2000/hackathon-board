@@ -1,0 +1,59 @@
+extends layout
+block content
+    if shipments.length === 0
+        h3 There is nothing to ship yet
+    else
+        div.row
+            div.hacks-count= shipments.length + " Shipments"
+    if user && user.judge
+        for shipment in shipments
+            div.row.row-bottom-padding(id= shipment._id, class=shipment.dispatched ? "dispatched-row" : "")
+                div.col-xs-12.hack-background
+                    div.col-xs-3
+                        div= shipment.location
+                    div.col-xs-2
+                        div.row
+                            if shipment.requested.small
+                                div.col-xs-8
+                                    div= 'Small'
+                                div.col-xs-4
+                                    div= shipment.requested.small
+                            if shipment.requested.medium
+                                div.col-xs-8
+                                    div= 'Medium'
+                                div.col-xs-4
+                                    div= shipment.requested.medium
+                            if shipment.requested.large
+                                div.col-xs-8
+                                    div= 'Large'
+                                div.col-xs-4
+                                    div= shipment.requested.large
+                            if shipment.requested.xlarge
+                                div.col-xs-8
+                                    div= 'X-Large'
+                                div.col-xs-4
+                                    div= shipment.requested.xlarge
+                            if shipment.requested.xxlarge
+                                div.col-xs-8
+                                    div= 'XX-Large'
+                                div.col-xs-4
+                                    div= shipment.requested.xxlarge
+                            if shipment.requested.xxxlarge
+                                div.col-xs-8
+                                    div= 'XXX-Large'
+                                div.col-xs-4
+                                    div= shipment.requested.xxxlarge
+                    div.col-xs-4
+                        div.pre= shipment.address
+                    div.col-xs-2
+                        if shipment.dispatched
+                            div.non-printable.dispatch-button Dispatched
+                        else
+                            form(role='form' method='post')
+                                .form-group
+                                    input(type='hidden', name='_csrf', value=_csrf)
+                                .form-group
+                                    input(type='hidden', name='id', value=shipment._id)
+                                    button.non-printable.dispatch-button Mark as Dispatched
+                    div.col-xs-1
+                        button.non-printable.print-button(onclick="printDiv('" +  shipment._id + "');") Print

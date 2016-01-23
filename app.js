@@ -30,6 +30,7 @@ var userController = require('./controllers/user');
 var eventsController = require('./controllers/events');
 var adminController = require('./controllers/admin');
 var rulesController = require('./controllers/rules');
+var tshirtController = require('./controllers/tshirt');
 
 /**
  * API keys and Passport configuration.
@@ -163,7 +164,13 @@ app.get('/judging', userController.getJudging);
 app.get('/users', userController.getAllUsers);
 app.post('/users', passportConf.isAuthenticated, userController.postUser);
 
-
+/**
+ * tshirt request routes
+ */
+app.get('/tshirt', passportConf.isAuthenticated, tshirtController.getTshirt);
+app.post('/tshirt', passportConf.isAuthenticated, tshirtController.postTshirt);
+app.get('/shipment', passportConf.isAuthenticated, tshirtController.getShipment);
+app.post('/shipment', passportConf.isAuthenticated, tshirtController.markAsDispatched);
 
 /**
  * OAuth authentication routes. (Sign in)

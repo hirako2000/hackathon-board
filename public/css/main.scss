@@ -106,6 +106,12 @@ footer {
   padding-bottom: 20px;
 }
 
+@media print {
+  .non-printable {
+    visibility: hidden;
+  }
+}
+
 .hack-category {
   float: right;
   min-width: 100px;
@@ -228,6 +234,22 @@ footer {
 
 .make-judge-button {
   font-size: 0.6em;
+}
+
+.print-button {
+  background-color: transparent;
+  color: #005983;
+  border: 0;
+}
+
+.dispatch-button {
+  background-color: transparent;
+  color: #a02d1a;
+  border: 0;
+}
+
+.dispatched-row {
+  opacity: 0.5;
 }
 
 .admin-links {

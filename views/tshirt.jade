@@ -1,0 +1,39 @@
+extends ./layout
+block content
+    h3 T-shirt request
+
+    div.row
+        div.col
+            form(role='form' method='post')
+                .form-group
+                    input(type='hidden', name='_csrf', value=_csrf)
+                .form-group
+                    input(type='hidden', name='email', value=user.email)
+                .form-group
+                    label(for='name') Name:
+                    input#name.form-control(type='text' name='name' value=user.profile.name)
+                .form-group
+                    label(for='location') Location:
+                    select#location.form-control(type'text' name='location')
+                        option(value="Atlanta" selected=user.profile.location === "Atlanta") Atlanta
+                        option(value="Edinburgh" selected=user.profile.location === "Edinburgh") Edinburgh
+                        option(value="Hyderabad" selected=user.profile.location === "Hyderabad") Hyderabad
+                        option(value="Providence" selected=user.profile.location === "Providence") Providence
+                        option(value="Remote" selected=user.profile.location === "Remote") Remote
+                .form-group
+                    label(for='address') Address (if remote shipment):
+                    textarea#address.form-control(type='text' name='address' rows=5)=user.profile.address
+                .form-group
+                    label(for='size') Size:
+                    select#size.form-control(type'text' name='size')
+                        option(value="small") Small
+                        option(value="medium" selected) Medium
+                        option(value="large") Large
+                        option(value="xlarge") X-Large
+                        option(value="xxlarge") XX-Large
+                        option(value="xxxlarge") XXX-Large
+                .form-group
+                    label(for='note') Note:
+                    textarea#note.form-control(type='text' name='note' rows=5)
+
+                button.btn.btn-default(type='submit') Submit
