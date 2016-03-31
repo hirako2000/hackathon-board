@@ -31,6 +31,7 @@ var eventsController = require('./controllers/events');
 var adminController = require('./controllers/admin');
 var rulesController = require('./controllers/rules');
 var tshirtController = require('./controllers/tshirt');
+var beautifierController = require('./controllers/beautifier');
 
 /**
  * API keys and Passport configuration.
@@ -117,6 +118,8 @@ app.post('/account/profile', passportConf.isAuthenticated, userController.postUp
 app.post('/account/password', passportConf.isAuthenticated, userController.postUpdatePassword);
 app.post('/account/delete', passportConf.isAuthenticated, userController.postDeleteAccount);
 app.get('/account/unlink/:provider', passportConf.isAuthenticated, userController.getOauthUnlink);
+app.get('/beautifier', beautifierController.getBeautifier);
+app.post('/beautifier', beautifierController.postBeautifier);
 
 
 /**

@@ -1,0 +1,31 @@
+extends layout
+h3 JS - JSON - HTML - CSS Beautifier
+block content
+    div.row
+        div.col
+            form(role='form' method='post')
+                .form-group
+                    input(type='hidden', name='_csrf', value=_csrf)
+                .form-group
+                    label(for='content') Content
+                    textarea#content.form-control(type='text' name='content' rows=6)
+                .form-group
+                    label(for='lang') Lang:
+                    select#lang.form-control(type='radio' name='lang')
+                        option(value="js" selected=true) JavaScript/jSON
+                        option(value="css") CSS
+                        option(value="html") HTML
+                        option(value="guess") Other - I will do my best...
+                .form-group
+                    label(for='indent') Intend Size :
+                    select#indent.form-control(type='radio' name='indent')
+                        option(value="2" selected=true) 2
+                        option(value="4") 4
+
+                button.btn.btn-default(type='submit') Submit
+
+    if beautified
+        div.row.padding-top
+            pre
+                code= beautified
+
