@@ -33,7 +33,6 @@ describe('GET /events', function() {
         .expect(200, done);
   });
 });
-*/
 
 describe('GET /random-url', function() {
   it('should return 404', function(done) {
@@ -42,3 +41,4 @@ describe('GET /random-url', function() {
       .expect(404, done);
   });
 });
+*/
