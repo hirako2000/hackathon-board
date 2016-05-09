@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/hirako2000/hackathon-board.svg?branch=master)](https://travis-ci.org/hirako2000/hackathon-board)
+[![devDependency Status](https://david-dm.org/hirako2000/hackathon-board/dev-status.svg)](https://david-dm.org/hirako2000/hackathon-board#info=devDependencies)
+
 Table of Contents
 -----------------
 
