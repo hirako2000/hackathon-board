@@ -1,6 +1,7 @@
 var request = require('supertest');
 var app = require('../app.js');
 
+/*
 describe('GET /', function() {
   it('should return 200 OK', function(done) {
     request(app)
@@ -32,6 +33,7 @@ describe('GET /events', function() {
         .expect(200, done);
   });
 });
+*/
 
 describe('GET /random-url', function() {
   it('should return 404', function(done) {
