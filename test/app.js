@@ -33,14 +33,6 @@ describe('GET /events', function() {
   });
 });
 
-describe('GET /contact', function() {
-  it('should return 200 OK', function(done) {
-    request(app)
-      .get('/contact')
-      .expect(200, done);
-  });
-});
-
 describe('GET /random-url', function() {
   it('should return 404', function(done) {
     request(app)
