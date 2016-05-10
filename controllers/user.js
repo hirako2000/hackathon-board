@@ -97,11 +97,17 @@ exports.postSignup = function(req, res, next) {
       req.flash('errors', { msg: 'Account with that email address already exists.' });
       return res.redirect('/signup');
     }
-    user.save(function(err) {
-      if (err) return next(err);
-      req.logIn(user, function(err) {
+    User.count({judge: 'true'}, function(err, count) {
+      console.log("count = " + count);
+      if (count === 0) {
+        user.judge = true;
+      }
+      user.save(function(err) {
         if (err) return next(err);
-        res.redirect('/');
+        req.logIn(user, function(err) {
+          if (err) return next(err);
+          res.redirect('/');
+        });
       });
     });
   });
