@@ -90,6 +90,9 @@ https://github.com/sahat/hackathon-starter
 
 FAQ
 ---
+- Admin user?
+Starting with 1.0.2, the first user to signup with email/passowrd becomes admin.
+Admin users can make other users admin in the admin users page.
 
 Contributing
 ------------
