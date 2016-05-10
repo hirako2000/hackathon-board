@@ -53,6 +53,7 @@ Features
  - Add/Edit prize
  - Edit rules
  - Nominate hack
+- **Beautifier**
 
 Prerequisites
 -------------
