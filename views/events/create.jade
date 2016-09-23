@@ -35,7 +35,7 @@ block content
                     label(for='season') Season:
                     select#season.form-control(type'text' name='season' value=event.season)
                         for season in seasons
-                            option(value=season._id selected=event.season ? event.season === season._id : season.current)= season.name
+                            option(value=season._id selected=event.season ? event.season === season._id.toString() : season.current)= season.name
                 .form-group
                     label(for='location') Location:
                     select#location.form-control(type'text' name='location')
