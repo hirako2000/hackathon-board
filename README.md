@@ -7,7 +7,7 @@
 Table of Contents
 -----------------
 
-- [Demo]((#demo)
+- [Demo](#demo)
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
