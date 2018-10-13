@@ -1,0 +1,5 @@
+node_modules
+lib
+.cache
+now.json
+.vscode
