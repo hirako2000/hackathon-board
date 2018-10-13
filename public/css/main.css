@@ -8620,20 +8620,20 @@ fieldset[disabled] .btn-pinterest.active {
 
 .btn-reddit:focus, .btn-reddit.focus {
   color: #000;
-  background-color: #bcddff;
+  background-color: #bcdeff;
   border-color: rgba(0, 0, 0, 0.2);
 }
 
 .btn-reddit:hover {
   color: #000;
-  background-color: #bcddff;
+  background-color: #bcdeff;
   border-color: rgba(0, 0, 0, 0.2);
 }
 
 .btn-reddit:active, .btn-reddit.active,
 .open > .btn-reddit.dropdown-toggle {
   color: #000;
-  background-color: #bcddff;
+  background-color: #bcdeff;
   border-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -8732,20 +8732,20 @@ fieldset[disabled] .btn-soundcloud.active {
 
 .btn-tumblr:focus, .btn-tumblr.focus {
   color: #fff;
-  background-color: #1c2d3f;
+  background-color: #1c2e3f;
   border-color: rgba(0, 0, 0, 0.2);
 }
 
 .btn-tumblr:hover {
   color: #fff;
-  background-color: #1c2d3f;
+  background-color: #1c2e3f;
   border-color: rgba(0, 0, 0, 0.2);
 }
 
 .btn-tumblr:active, .btn-tumblr.active,
 .open > .btn-tumblr.dropdown-toggle {
   color: #fff;
-  background-color: #1c2d3f;
+  background-color: #1c2e3f;
   border-color: rgba(0, 0, 0, 0.2);
 }
 
