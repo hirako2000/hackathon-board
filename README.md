@@ -40,20 +40,20 @@ Features
   * description
 - **Rules page**  
 - **User profile**
- - Gravatar
- - Profile Details
- - Change Password
- - Forgot Password
- - Reset Password
- - Link multiple OAuth strategies to one account
- - Delete Account
+  * Gravatar
+  * Profile Details
+  * Change Password
+  * Forgot Password
+  * Reset Password
+  * Link multiple OAuth strategies to one account
+  * Delete Account
 - CSRF protection
 - **Admin**
- - Add/edit categories
- - Add/edit seasons
- - Add/Edit prize
- - Edit rules
- - Nominate hack
+  * Add/edit categories
+  * Add/edit seasons
+  * Add/Edit prize
+  * Edit rules
+  * Nominate hack
 - **Beautifier**
 
 Prerequisites
