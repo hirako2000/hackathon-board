@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d6d5811ca8414c3e9120039a6fc94ae3)](https://app.codacy.com/app/hirako2000/hackathon-board?utm_source=github.com&utm_medium=referral&utm_content=hirako2000/hackathon-board&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/hirako2000/hackathon-board.svg?branch=master)](https://travis-ci.org/hirako2000/hackathon-board)
 [![Dependency Status](https://david-dm.org/hirako2000/hackathon-board.svg)](https://david-dm.org/hirako2000/hackathon-board)
 [![devDependency Status](https://david-dm.org/hirako2000/hackathon-board/dev-status.svg)](https://david-dm.org/hirako2000/hackathon-board#info=devDependencies)
