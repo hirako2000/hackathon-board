@@ -7,7 +7,7 @@
 Table of Contents
 -----------------
 
-- [Demo]
+- [Demo]((#demo)
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
@@ -19,6 +19,7 @@ Table of Contents
 Demo
 --------
 See a live demo [here](https://hackathon-board.now.sh)
+
 The demo instance often goes to sleep after inactivity, cilck and wait about a minute for it to awake.
 
 Features
