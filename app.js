@@ -47,7 +47,13 @@ var app = express();
 /**
  * Connect to MongoDB.
  */
-mongoose.connect(secrets.db);
+mongoose.connect(
+  secrets.db,
+  { useNewUrlParser: true,
+    server: {
+      sslValidate: false
+  } }
+);
 mongoose.connection.on('error', function() {
   console.log('MongoDB Connection Error. Please make sure that MongoDB is running.');
 });
