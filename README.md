@@ -18,7 +18,7 @@ Table of Contents
 
 Demo
 --------
-See a live demo [here](https://hackathon-board.now.sh)
+See a live demo [here](https://hackathon-board.herokuapp.com/)
 
 The demo instance often goes to sleep after inactivity, cilck and wait about a minute for it to awake.
 
