@@ -94,15 +94,24 @@ to obtain appropriate credentials: Client ID, Client Secret, API Key, or
 Username & Password. You will need to go through each provider to generate new
 credentials.
 
-I have included dummy keys and passwords from **Hackathon Starter ** . But don't forget to update
+I have included dummy keys and passwords from **Hackathon Starter** . But don't forget to update
 them with *your credentials* when you are ready to deploy an app.
 https://github.com/sahat/hackathon-starter
 
 FAQ
 ---
-- Admin user?
+**Admin user?**
 Starting with 1.0.2, the first user to signup with email/passowrd becomes admin.
 Admin users can make other users admin in the admin users page.
+
+**Anything for the admin to setup**
+- Yes, as admin, create at least one Season, one category. (required or no hack can be create by users)
+- Then Also fill the Rules page, and add some prize entry. 
+
+That's pretty much all needed to get going, from there users can create their own hacks.
+
+**Why can I not add new locations?**
+- Add location in the source code. It's fairly easy to add as many as you like. I never got to implement a CRUD for these.
 
 Contributing
 ------------
